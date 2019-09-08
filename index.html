@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bulma File Upload</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+			<input type="file" class="inputfile inputfile-2" id="file" >
+			<label for="file"><span id="filename">Choose File...</span></label>
+</body>
+<script>
+	var file = document.getElementById("file");
+		file.onchange = function(){
+	    if(file.files.length > 0)
+	    {
+
+	      document.getElementById('filename').innerHTML = file.files[0].name;
+
+	    }
+	};
+</script>
+</html>
